@@ -270,12 +270,11 @@ We thank the research teams of IHU and IRCAD  for their help in the initial anno
    [![ArXiv paper](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) 
    [![GitHub](https://img.shields.io/badge/github-attention.tripnet-blue)](https://github.com/CAMMA-public/attention-tripnet) 
 -  CholecTriplet2021 Challenge
-   [![Challenge website](https://img.shields.io/badge/website-2021.cholectriplet-lightgreen)](https://github.com/CAMMA-public/cholectriplet2021) 
+   [![Challenge website](https://img.shields.io/badge/website-2021.cholectriplet-lightgreen)](https://cholectriplet2021.grand-challenge.org) 
    [![ArXiv paper](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) 
    [![GitHub](https://img.shields.io/badge/github-2021.cholectriplet-blue)](https://github.com/CAMMA-public/cholectriplet2022) 
 -  CholecTriplet2022 Challenge
-   [![Challenge website](https://img.shields.io/badge/website-2022.cholectriplet-lightgreen)](https://github.com/CAMMA-public/cholectriplet2022) 
-   [![ArXiv paper](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) 
+   [![Challenge website](https://img.shields.io/badge/website-2022.cholectriplet-lightgreen)](https://cholectriplet2022.grand-challenge.org) 
    [![GitHub](https://img.shields.io/badge/github-2022.cholectriplet-blue)](https://github.com/CAMMA-public/cholectriplet2022)
    
 </b>
@@ -337,7 +336,7 @@ If you find this repo useful in your project or research, please consider citing
 ```
 @article{nwoye2022cholectriplet2021,
   title={CholecTriplet2021: a benchmark challenge for surgical action triplet recognition},
-  author={Nwoye, Chinedu Innocent and Alapatt, Deepak and Vardazaryan, Armine ... and Padoy, Nicolas},
+  author={Nwoye, Chinedu Innocent and Alapatt, Deepak and Vardazaryan, Armine ... Gonzalez, Cristians and Padoy, Nicolas},
   journal={arXiv preprint},
   year={2022}
 }
