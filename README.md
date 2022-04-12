@@ -23,7 +23,7 @@ This repository contains the implementation code, inference demo, and evaluation
 <br />
 [![Read on ArXiv](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) 
 [![Journal Publication](https://img.shields.io/badge/Elsevier-Medical%20Image%20Analysis-orange)](https://doi.org/10.1016/j.media.2022.102433)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/CAMMA-public/ConvLSTM-Surgical-Tool-Tracker/blob/master/evaluation.ipynb) 
+<!-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/CAMMA-public/ConvLSTM-Surgical-Tool-Tracker/blob/master/evaluation.ipynb) -->
 
 
 
@@ -44,7 +44,7 @@ Our proposed RDV model significantly improves the triplet prediction mAP by over
 ------
 # News and Updates
 - <b>[2022.04.01]:</b> Demo code and pre-trained model released!
-- <b>[2022.04.01]:</b> 45 videos subset of CholecT50 released!
+- <b>[2022.04.12]:</b> 45 videos subset of CholecT50 released! [download access](http://camma.u-strasbg.fr/datasets).
 <!-- - <b>[2022.03.22]:</b> The paper is accepted at Elsevier Medical Image Analysis 2022! -->
 
 <br>
