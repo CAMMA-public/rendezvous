@@ -294,8 +294,10 @@ If you find this repo useful in your project or research, please consider citing
 @article{nwoye2021rendezvous,
   title={Rendezvous: Attention Mechanisms for the Recognition of Surgical Action Triplets in Endoscopic Videos},
   author={Nwoye, Chinedu Innocent and Yu, Tong and Gonzalez, Cristians and Seeliger, Barbara and Mascagni, Pietro and Mutter, Didier and Marescaux, Jacques and Padoy, Nicolas},
-  journal={arXiv preprint arXiv:2109.03223},
-  year={2021}
+  journal={Medical Image Analysis},
+  volume={78},
+  pages={102433},
+  year={2022}
 }
 ```
 
