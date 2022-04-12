@@ -132,6 +132,8 @@ Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed 
 [CholecT45](https://github.com/CAMMA-public/cholect45) and CholecT50
 
 ## Data splits
+[![Official dataset split](https://img.shields.io/badge/arxiv-2204.05235-red)](https://arxiv.org/abs/2204.05235)
+
 ## Data Preparation
 
 <br>
@@ -262,7 +264,7 @@ We thank the research teams of IHU and IRCAD  for their help in the initial anno
    [![Download dataset](https://img.shields.io/badge/download-camma-yellowgreen)](http://camma.u-strasbg.fr/datasets) 
    [![GitHub](https://img.shields.io/badge/github-CholecT45-blue)](https://github.com/CAMMA-public/cholect45)   
 -  Offical Dataset Splits 
-   [![Read on ArXiv](https://img.shields.io/badge/arxiv-109.03223-red)](https://arxiv.org/abs/2109.03223) 
+   [![Official dataset split](https://img.shields.io/badge/arxiv-2204.05235-red)](https://arxiv.org/abs/2204.05235)
 -  Tripnet 
    [![ArXiv paper](https://img.shields.io/badge/arxiv-2007.05405-red)](https://arxiv.org/abs/2007.05405) 
    [![GitHub](https://img.shields.io/badge/github-tripnet-blue)](https://github.com/CAMMA-public/tripnet)   
@@ -271,12 +273,12 @@ We thank the research teams of IHU and IRCAD  for their help in the initial anno
    [![GitHub](https://img.shields.io/badge/github-attention.tripnet-blue)](https://github.com/CAMMA-public/attention-tripnet) 
 -  CholecTriplet2021 Challenge
    [![Challenge website](https://img.shields.io/badge/website-2021.cholectriplet-lightgreen)](https://cholectriplet2021.grand-challenge.org) 
-   [![ArXiv paper](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) 
+   [![ArXiv paper](https://img.shields.io/badge/arxiv-2204.04746-red)](https://arxiv.org/abs/2204.04746) 
    [![GitHub](https://img.shields.io/badge/github-2021.cholectriplet-blue)](https://github.com/CAMMA-public/cholectriplet2022) 
 -  CholecTriplet2022 Challenge
    [![Challenge website](https://img.shields.io/badge/website-2022.cholectriplet-lightgreen)](https://cholectriplet2022.grand-challenge.org) 
    [![GitHub](https://img.shields.io/badge/github-2022.cholectriplet-blue)](https://github.com/CAMMA-public/cholectriplet2022)
-   
+ 
 </b>
 
 <br>
@@ -303,7 +305,7 @@ If you find this repo useful in your project or research, please consider citing
 @article{nwoye2022data,
   title={Data Splits and Metrics for Benchmarking Methods on Surgical Action Triplet Datasets},
   author={Nwoye, Chinedu Innocent and Padoy, Nicolas},
-  journal={arXiv preprint},
+  journal={arXiv preprint arXiv:2204.05235},
   year={2022}
 }
 ```
@@ -314,8 +316,10 @@ If you find this repo useful in your project or research, please consider citing
 @article{nwoye2021rendezvous,
   title={Rendezvous: Attention Mechanisms for the Recognition of Surgical Action Triplets in Endoscopic Videos},
   author={Nwoye, Chinedu Innocent and Yu, Tong and Gonzalez, Cristians and Seeliger, Barbara and Mascagni, Pietro and Mutter, Didier and Marescaux, Jacques and Padoy, Nicolas},
-  journal={arXiv preprint arXiv:2109.03223},
-  year={2021}
+  journal={Medical Image Analysis},
+  volume={78},
+  pages={102433},
+  year={2022}
 }
 ```
 
@@ -337,7 +341,7 @@ If you find this repo useful in your project or research, please consider citing
 @article{nwoye2022cholectriplet2021,
   title={CholecTriplet2021: a benchmark challenge for surgical action triplet recognition},
   author={Nwoye, Chinedu Innocent and Alapatt, Deepak and Vardazaryan, Armine ... Gonzalez, Cristians and Padoy, Nicolas},
-  journal={arXiv preprint},
+  journal={arXiv preprint arXiv:2204.04746},
   year={2022}
 }
 ```
