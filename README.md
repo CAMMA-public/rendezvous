@@ -23,7 +23,9 @@ This repository contains the implementation code, inference demo, and evaluation
 <br />
 [![Read on ArXiv](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) 
 [![Journal Publication](https://img.shields.io/badge/Elsevier-Medical%20Image%20Analysis-orange)](https://doi.org/10.1016/j.media.2022.102433)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rendezvous-attention-mechanisms-for-the/action-triplet-recognition-on-cholect50)](https://paperswithcode.com/sota/action-triplet-recognition-on-cholect50?p=rendezvous-attention-mechanisms-for-the)
 <!-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/CAMMA-public/ConvLSTM-Surgical-Tool-Tracker/blob/master/evaluation.ipynb) -->
+
 
 
 
