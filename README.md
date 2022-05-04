@@ -311,15 +311,14 @@ By downloading and using this code you agree to the terms in the [LICENSE](LICEN
 This work was supported by French state funds managed within the Investissements d'Avenir program by BPI France in the scope of ANR project CONDOR, ANR Labex CAMI, ANR DeepSurg, ANR IHU Strasbourg and ANR National AI Chair AI4ORSafety.
 We thank the research teams of IHU and IRCAD  for their help in the initial annotation of the dataset during the CONDOR project.
 
-<br><br>
-<img src="files/ihu.png" width="6%" align="right" > 
-<img src="files/davenir.png" width="8%" align="right">
-<img src="files/bpi.png.svg" width="14%" align="right">
-<img src="files/ircad.png" width="10%" align="right"> 
-<img src="files/hopital.png" width="7%"  align="right"> 
-<img src="files/condor.png" width="10%"  align="right">
 <br>
-<br><br>
+
+<img src="files/ihu.png" width="6%" align="right" > <img src="files/davenir.png" width="8%" align="right"> <img src="files/bpi.png.svg" width="14%" align="right"> <img src="files/ircad.png" width="10%" align="right">  <img src="files/hopital.png" width="7%"  align="right">  
+<img src="files/condor.png" width="10%"  align="right">
+
+<br>
+
+<br>
 
 
 
