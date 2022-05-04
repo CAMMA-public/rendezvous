@@ -10,6 +10,8 @@
 
 
 
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
 [![](https://img.shields.io/badge/WORK```IN-PROGRESS-blue?style=for-the-badge)](https://hamzamohdzubair.github.io/redant/)
 
 
@@ -48,7 +50,7 @@ Our proposed RDV model significantly improves the triplet prediction mAP by over
 - <b>[2022.04.01]:</b> Demo code and pre-trained model released!
 - <b>[2022.04.12]:</b> 45 videos subset of CholecT50 released! [download access](http://camma.u-strasbg.fr/datasets).
 <!-- - <b>[2022.03.22]:</b> Paper accepted at Elsevier Medical Image Analysis 2022! -->
-
+- <b>[2022.05.03]:</b> PyTorch implementation code released!
 <br>
 
 
