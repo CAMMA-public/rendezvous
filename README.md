@@ -17,9 +17,7 @@
 
 This repository contains the implementation code, inference demo, and evaluation scripts.
 <br />
-[![Read on ArXiv](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) 
-[![Journal Publication](https://img.shields.io/badge/Elsevier-Medical%20Image%20Analysis-orange)](https://doi.org/10.1016/j.media.2022.102433)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rendezvous-attention-mechanisms-for-the/action-triplet-recognition-on-cholect50)](https://paperswithcode.com/sota/action-triplet-recognition-on-cholect50?p=rendezvous-attention-mechanisms-for-the)
+[![Read on ArXiv](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223)  [![Journal Publication](https://img.shields.io/badge/Elsevier-Medical%20Image%20Analysis-orange)](https://doi.org/10.1016/j.media.2022.102433) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rendezvous-attention-mechanisms-for-the/action-triplet-recognition-on-cholect50)](https://paperswithcode.com/sota/action-triplet-recognition-on-cholect50?p=rendezvous-attention-mechanisms-for-the)
 
 
 
@@ -37,7 +35,7 @@ Our proposed RDV model significantly improves the triplet prediction mAP by over
 <br>
 
 
-------
+
 
 # News and Updates
 
@@ -49,7 +47,7 @@ Our proposed RDV model significantly improves the triplet prediction mAP by over
 <br>
 
 
-------
+
 
 # Model Overview
 
@@ -72,7 +70,7 @@ We hope this repo will help researches/engineers in the development of surgical 
 
 <br>
 
-------
+
 
 # Performance
 
@@ -96,7 +94,7 @@ Available on Youtube.
 
 <br>
 
-------
+
 
 # Installation
 
@@ -141,7 +139,6 @@ coming soon . . .
 
 <br>
 
-------
 
 # Dataset Zoo
 
@@ -164,7 +161,7 @@ coming soon . . .
 
 <br>
 
-------
+
 
 ## Evaluation Metrics
 
@@ -184,7 +181,7 @@ Usage guide is found on [pypi.org](https://pypi.org/project/ivtmetrics/).
 
 <br>
 
-------
+
 
 # Running the Model
 
@@ -227,7 +224,7 @@ Adding custom datasets is quite simple, what you need to do are:
 
 <br>
 
-------
+
 
 # Model Zoo
 
@@ -251,7 +248,7 @@ Adding custom datasets is quite simple, what you need to do are:
 | Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k3 |   [Google] [Baidu] |
 | Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k4 |   [Google] [Baidu] |
 | Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k5 |   [Google] [Baidu] |
-------------
+
 
 <br />
 
@@ -265,8 +262,6 @@ Adding custom datasets is quite simple, what you need to do are:
 <br />
 
 
-<br>
-
 ## TensorFlow v2
 
 | Network   | Base      | Resolution | Dataset   | Data split    | Link             |
@@ -274,10 +269,12 @@ Adding custom datasets is quite simple, what you need to do are:
 | Rendezvous| ResNet-18 | High       | CholecT50 | RDV           |   [Google] [Baidu] |
 | Rendezvous| ResNet-18 | Low        | CholecT50 | RDV           |   [Google] [Baidu] |
 | Rendezvous| ResNet-18 | High       | CholecT50 | Challenge     |   [Google] [Baidu] |
-------------
+
+
 <br />
 
 ## Baseline Models
+
 TensorFlow v1
 | Model | Layer Size | Ablation Component |AP<sub>IVT</sub> | Link |
 ------------|------|------------|------|-----|
