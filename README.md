@@ -32,7 +32,7 @@ This technique uses several cross and self attentions to effectively capture rel
 We also introduce <i> CholecT50</i>  - a dataset of 50 endoscopic videos in which <i>every</i> frame has been annotated with labels from 100 triplet classes.
 Our proposed RDV model significantly improves the triplet prediction mAP by over 9% compared to the state-of-the-art methods on this dataset.
 
-<br>
+<br />
 
 
 
@@ -44,7 +44,7 @@ Our proposed RDV model significantly improves the triplet prediction mAP by over
 <!-- - <b>[2022.03.22]:</b> Paper accepted at Elsevier Medical Image Analysis 2022! -->
 - <b>[2022.05.03]:</b> PyTorch implementation code released!
 
-<br>
+<br />
 
 
 
@@ -68,7 +68,7 @@ The RDV model is composed of:
 
 We hope this repo will help researches/engineers in the development of surgical action recognition systems. For algorithm development, we provide training data, baseline models and evaluation methods to make a level playground. For application usage, we also provide a small video demo that takes raw videos as input without any bells and whistles.
 
-<br>
+<br />
 
 
 
@@ -92,7 +92,7 @@ AP<sub>I</sub> | AP<sub>V</sub> | AP<sub>T</sub> ||| AP<sub>IV</sub> | AP<sub>IT
 
 Available on Youtube.
 
-<br>
+<br />
 
 
 
@@ -130,14 +130,14 @@ Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed 
 * train
 * evaluate
 
-<br>
+<br />
 
 
 ## Docker Example
 
 coming soon . . .
 
-<br>
+<br />
 
 
 # Dataset Zoo
@@ -146,7 +146,7 @@ coming soon . . .
 * CholecT50
 * [Dataset splits](https://arxiv.org/abs/2204.05235)
 
-<br>
+<br />
 
 
 ## Data Preparation
@@ -159,7 +159,7 @@ coming soon . . .
    - cholect45-crossval = CholecT45 with official cross-val split **(currently public released)**.
    - cholect50-crossval = CholecT50 with official cross-val split.
 
-<br>
+<br />
 
 
 
@@ -179,15 +179,14 @@ conda install -c nwoye ivtmetrics
 
 Usage guide is found on [pypi.org](https://pypi.org/project/ivtmetrics/).
 
-<br>
-
+<br />
 
 
 # Running the Model
 
 The code can be run in a trianing mode (`-t`) or testing mode (`-e`)  or both (`-t -e`) if you want to evaluate at the end of training :
 
-<br>
+<br />
 
 ## Training on CholecT45/CholecT50 Dataset
 
@@ -206,7 +205,7 @@ python3 run.py -t -e  --data_dir="/path/to/dataset" --dataset_variant=cholect45-
 All the flags can been seen in the `run.py` file.
 The experimental setup of the published model is contained in the paper.
 
-<br>
+<br />
 
 ## Testing
 
@@ -214,15 +213,15 @@ The experimental setup of the published model is contained in the paper.
 python3 run.py -e --dataset_variant=cholect45-crossval --kfold 3 --batch 32 --version=1 --test_ckpt="/path/to/model-k3/weights" --data_dir="/path/to/dataset"
 ```
 
-<br>
+<br />
 
-## Training on Custom Dataset
+ ## Training on Custom Dataset
 
 Adding custom datasets is quite simple, what you need to do are:
 - organize your annotation files in the same format as in [CholecT45](https://github.com/CAMMA-public/cholect45) dataset. 
 - final model layers can be modified to suit your task by changing the class-size (num_tool_classes, num_verb_classes, num_target_classes, num_triplet_classes) in the argparse.
 
-<br>
+<br />
 
 
 
@@ -291,7 +290,7 @@ TensorFlow v1
 
 Model weights are released periodically because some training are in progress.
 
-<br><br>
+<br /><br />
 
 
 ------------
@@ -302,7 +301,7 @@ This code, models, and datasets are available for **non-commercial scientific re
 By downloading and using this code you agree to the terms in the [LICENSE](LICENSE). Third-party codes are subject to their respective licenses.
 
 
-<br>
+<br />
 
 ------
 
@@ -311,14 +310,14 @@ By downloading and using this code you agree to the terms in the [LICENSE](LICEN
 This work was supported by French state funds managed within the Investissements d'Avenir program by BPI France in the scope of ANR project CONDOR, ANR Labex CAMI, ANR DeepSurg, ANR IHU Strasbourg and ANR National AI Chair AI4ORSafety.
 We thank the research teams of IHU and IRCAD  for their help in the initial annotation of the dataset during the CONDOR project.
 
-<br>
+<br />
 
 <img src="files/ihu.png" width="6%" align="right" > <img src="files/davenir.png" width="8%" align="right"> <img src="files/bpi.png.svg" width="14%" align="right"> <img src="files/ircad.png" width="10%" align="right">  <img src="files/hopital.png" width="7%"  align="right">  
 <img src="files/condor.png" width="10%"  align="right">
 
-<br>
+<br />
 
-<br>
+<br />
 
 
 
@@ -328,27 +327,21 @@ We thank the research teams of IHU and IRCAD  for their help in the initial anno
 <b>
    
 -  CholecT45 / CholecT50 Datasets
-   [![Download dataset](https://img.shields.io/badge/download-camma-yellowgreen)](http://camma.u-strasbg.fr/datasets) 
-   [![GitHub](https://img.shields.io/badge/github-CholecT45-blue)](https://github.com/CAMMA-public/cholect45)   
+   [![Download dataset](https://img.shields.io/badge/download-camma-yellowgreen)](http://camma.u-strasbg.fr/datasets)    [![GitHub](https://img.shields.io/badge/github-CholecT45-blue)](https://github.com/CAMMA-public/cholect45)   
 -  Offical Dataset Splits 
    [![Official dataset split](https://img.shields.io/badge/arxiv-2204.05235-red)](https://arxiv.org/abs/2204.05235)
 -  Tripnet 
-   [![ArXiv paper](https://img.shields.io/badge/arxiv-2007.05405-red)](https://arxiv.org/abs/2007.05405) 
-   [![GitHub](https://img.shields.io/badge/github-tripnet-blue)](https://github.com/CAMMA-public/tripnet)   
+   [![ArXiv paper](https://img.shields.io/badge/arxiv-2007.05405-red)](https://arxiv.org/abs/2007.05405)    [![GitHub](https://img.shields.io/badge/github-tripnet-blue)](https://github.com/CAMMA-public/tripnet)   
 -  Attention Tripnet
-   [![ArXiv paper](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) 
-   [![GitHub](https://img.shields.io/badge/github-attention.tripnet-blue)](https://github.com/CAMMA-public/attention-tripnet) 
+   [![ArXiv paper](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223)    [![GitHub](https://img.shields.io/badge/github-attention.tripnet-blue)](https://github.com/CAMMA-public/attention-tripnet) 
 -  CholecTriplet2021 Challenge
-   [![Challenge website](https://img.shields.io/badge/website-2021.cholectriplet-lightgreen)](https://cholectriplet2021.grand-challenge.org) 
-   [![ArXiv paper](https://img.shields.io/badge/arxiv-2204.04746-red)](https://arxiv.org/abs/2204.04746) 
-   [![GitHub](https://img.shields.io/badge/github-2021.cholectriplet-blue)](https://github.com/CAMMA-public/cholectriplet2022) 
+   [![Challenge website](https://img.shields.io/badge/website-2021.cholectriplet-lightgreen)](https://cholectriplet2021.grand-challenge.org)     [![ArXiv paper](https://img.shields.io/badge/arxiv-2204.04746-red)](https://arxiv.org/abs/2204.04746)    [![GitHub](https://img.shields.io/badge/github-2021.cholectriplet-blue)](https://github.com/CAMMA-public/cholectriplet2022) 
 -  CholecTriplet2022 Challenge
-   [![Challenge website](https://img.shields.io/badge/website-2022.cholectriplet-lightgreen)](https://cholectriplet2022.grand-challenge.org) 
-   [![GitHub](https://img.shields.io/badge/github-2022.cholectriplet-blue)](https://github.com/CAMMA-public/cholectriplet2022)
+   [![Challenge website](https://img.shields.io/badge/website-2022.cholectriplet-lightgreen)](https://cholectriplet2022.grand-challenge.org)    [![GitHub](https://img.shields.io/badge/github-2022.cholectriplet-blue)](https://github.com/CAMMA-public/cholectriplet2022)
  
 </b>
 
-<br>
+<br />
 
 
 ------
