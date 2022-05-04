@@ -10,7 +10,7 @@
 
 
 
-[![](https://img.shields.io/badge/UNDER-CONSTRUCTION-blue?style=for-the-badge)](https://hamzamohdzubair.github.io/redant/)
+[![](https://img.shields.io/badge/WORK```IN-PROGRESS-blue?style=for-the-badge)](https://hamzamohdzubair.github.io/redant/)
 
 
 # **Rendezvous**: Attention Mechanisms for the Recognition of Surgical Action Triplets in Endoscopic Videos
@@ -47,7 +47,7 @@ Our proposed RDV model significantly improves the triplet prediction mAP by over
 # News and Updates
 - <b>[2022.04.01]:</b> Demo code and pre-trained model released!
 - <b>[2022.04.12]:</b> 45 videos subset of CholecT50 released! [download access](http://camma.u-strasbg.fr/datasets).
-<!-- - <b>[2022.03.22]:</b> The paper is accepted at Elsevier Medical Image Analysis 2022! -->
+<!-- - <b>[2022.03.22]:</b> Paper accepted at Elsevier Medical Image Analysis 2022! -->
 
 <br>
 
@@ -91,7 +91,8 @@ AP<sub>I</sub> | AP<sub>V</sub> | AP<sub>T</sub> ||| AP<sub>IV</sub> | AP<sub>IT
 
 <a href="https://www.youtube.com/watch?v=d_yHdJtCa98&t=61s"><img src="files/vid.png" width="20.2%" ></a>
 
-Youtube [link](https://www.youtube.com/watch?v=d_yHdJtCa98&t=61s) for full video
+Available on Youtube.
+
 <br>
 
 ------
@@ -101,29 +102,36 @@ The model depends on the following libraries:
 1. sklearn
 2. PIL
 3. Python >= 3.5
-4. t50metrics ( ``` pip install t50metrics ``` )
+4. ivtmetrics
 5. Developer's framework:
     1. For Tensorflow version 1:
-        * TF >= 1.9
-
+        * TF >= 1.10
     2. For Tensorflow version 2:
         * TF >= 2.1
     3. For PyTorch version:
         - Pyorch >= 1.10.1
         - TorchVision >= 0.11
 
-
-
-
-## Quick Start
-
-## Docker Example
+<br />
 
 ## System Requirements:
 The code has been test on Linux operating system. It runs on both CPU and GPU.
 Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed to run in Windows or Mac OS.
 
-## Downloads
+<br />
+
+## Quick Start
+* clone the git repository: ``` git clone https://github.com/CAMMA-public/rendezvous.git ```
+* install all the required libraries according to chosen your framework.
+* download the dataset
+* download model's weights
+* train
+* evaluate
+
+<br>
+
+## Docker Example
+coming soon . . .
 
 <br>
 
@@ -131,12 +139,72 @@ Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed 
 
 # Dataset Zoo
 
-[CholecT45](https://github.com/CAMMA-public/cholect45) and CholecT50
+* [CholecT45](https://github.com/CAMMA-public/cholect45) 
+* CholecT50
+* [Dataset splits](https://arxiv.org/abs/2204.05235)
 
-## Data splits
-[![Official dataset split](https://img.shields.io/badge/arxiv-2204.05235-red)](https://arxiv.org/abs/2204.05235)
+<br>
 
 ## Data Preparation
+* All frames are resized to 256 x 448 during training and evaluation.
+* Image data are mean normalized.
+* The dataset variants are tagged in this code as follows: 
+   - cholect50 = CholecT50 with split used in the original paper.
+   - cholect50-challenge = CholecT50 with split used in the CholecTriplet challenge.
+   - cholect45-crossval = CholecT45 with official cross-val split **(currently public released)**.
+   - cholect50-crossval = CholecT50 with official cross-val split.
+
+<br>
+
+------
+## Evaluation Metrics
+The *ivtmetrics* computes AP for triplet recognition. It also support the evaluation of the recognition of the triplet components.
+```
+pip install ivtmetrics
+```
+or
+```
+conda install -c nwoye ivtmetrics
+```
+Usage guide is found on [pypi.org](https://pypi.org/project/ivtmetrics/).
+
+<br>
+
+------
+# Running the Model
+The code can be run in a trianing mode (`-t`) or testing mode (`-e`)  or both (`-t -e`) if you want to evaluate at the end of training :
+
+<br>
+
+## Training on CholecT45/CholecT50 Dataset
+Simple training on CholecT50 dataset:
+```
+python run.py -t  --data_dir="/path/to/dataset" --dataset_variant=cholect50 --version=1
+```
+
+You can include more details such as epoch, batch size, cross-validation and evaluation fold, weight initialization, learning rates for all subtasks, etc.:
+
+```
+python3 run.py -t -e  --data_dir="/path/to/dataset" --dataset_variant=cholect45-crossval --kfold=1 --epochs=180 --batch=64 --version=2 -l 1e-2 1e-3 1e-4 --pretrain_dir='path/to/imagenet/weights'
+```
+
+All the flags can been seen in the `run.py` file.
+The experimental setup of the published model is contained in the paper.
+
+<br>
+
+## Testing
+
+```
+python3 run.py -e --dataset_variant=cholect45-crossval --kfold 3 --batch 32 --version=1 --test_ckpt="/path/to/model-k3/weights" --data_dir="/path/to/dataset"
+```
+
+<br>
+
+## Training on Custom Dataset
+Adding custom datasets is quite simple, what you need to do are:
+- organize your annotation files in the same format as in [CholecT45](https://github.com/CAMMA-public/cholect45) dataset. 
+- final model layers can be modified to suit your task by changing the class-size (num_tool_classes, num_verb_classes, num_target_classes, num_triplet_classes) in the argparse.
 
 <br>
 
@@ -145,100 +213,78 @@ Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed 
 
 * **N.B.** Download links to models' weights will not be provided until after the CholecTriplet2022 challenge.
 
-## TensorFlow v1
-| Network   | Base      | Resolution | Dataset   | Data split    | AP<sub>IVT</sub> | Link             |
-------------|-----------|------------|-----------|---------------|------------------|------------------|
-| Rendezvous| ResNet-18 | High       | CholecT50 | RDV           | | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | High       | CholecT45 | CholecTriplet | | [Google] [Baidu] |
-
-<br />
-
 
 ## PyTorch
-| Network   | Base      | Resolution | Dataset   | Data split    | AP<sub>IVT</sub> | Link             |
-------------|-----------|------------|-----------|---------------|------------------|------------------|
-| Rendezvous| ResNet-18 | Low        | CholecT50 | RDV           |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | High       | CholecT50 | RDV           |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT45 | CholecTriplet |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | CV-1          |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | Cv-2          |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | CV-3          |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | Cv-4          |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | CV-5          |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT45 | CV-1          |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT45 | Cv-2          |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT45 | CV-3          |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT45 | Cv-4          |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT45 | CV-5          |  | [Google] [Baidu] |
-<br>
+| Network   | Base      | Resolution | Dataset   | Data split  |  Link             |
+------------|-----------|------------|-----------|-------------|-------------------|
+| Rendezvous| ResNet-18 | Low        | CholecT50 | RDV         |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | High       | CholecT50 | RDV         |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | Challenge   |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k1 |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k2 |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k3 |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k4 |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k5 |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k1 |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k2 |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k3 |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k4 |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k5 |   [Google] [Baidu] |
+------------
 
+<br />
 
-## TensorFlow v2
-| Network   | Base      | Resolution | Dataset   | Data split    | AP<sub>IVT</sub> | Link             |
-------------|-----------|------------|-----------|---------------|------------------|------------------|
-| Rendezvous| ResNet-18 | High       | CholecT50 | RDV           |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | RDV           |  | [Google] [Baidu] |
-| Rendezvous| ResNet-18 | High       | CholecT45 | CholecTriplet |  | [Google] [Baidu] |
+## TensorFlow v1
+
+| Network   | Base      | Resolution | Dataset   | Data split    | Link             |
+------------|-----------|------------|-----------|---------------|------------------|
+| Rendezvous| ResNet-18 | High       | CholecT50 | RDV           |  [Google] [Baidu] |
+| Rendezvous| ResNet-18 | High       | CholecT50 | Challenge     |  [Google] [Baidu] |
 
 <br />
 
 
+<br>
 
+## TensorFlow v2
+| Network   | Base      | Resolution | Dataset   | Data split    | Link             |
+------------|-----------|------------|-----------|---------------|------------------|
+| Rendezvous| ResNet-18 | High       | CholecT50 | RDV           |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | RDV           |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | High       | CholecT50 | Challenge     |   [Google] [Baidu] |
+------------
+<br />
 
 ## Baseline Models
+TensorFlow v1
 | Model | Layer Size | Ablation Component |AP<sub>IVT</sub> | Link |
 ------------|------|------------|------|-----|
-|Rendezvous | 1 | Proposed |  | [Google] [Baidu] |
-|Rendezvous | 2 | Proposed |  | [Google] [Baidu] |
-|Rendezvous | 4 | Proposed |  | [Google] [Baidu] |
-|Rendezvous | 8 | Proposed |29.9  | [Google] [Baidu] |
-|Rendezvous | 8 | Patch sequence |  | [Google] [Baidu] |
-|Rendezvous | 8 | Temporal sequence |  | [Google] [Baidu] |
-|Rendezvous | 8 | Single Self Attention Head |  | [Google] [Baidu] |
-|Rendezvous | 8 | Multiple Self Attention Head |  | [Google] [Baidu] |
+|Rendezvous | 1 | Proposed | 24.6 | [Google] [Baidu] |
+|Rendezvous | 2 | Proposed | 27.0 | [Google] [Baidu] |
+|Rendezvous | 4 | Proposed | 27.3 | [Google] [Baidu] |
+|Rendezvous | 8 | Proposed | 29.9 | [Google] [Baidu] |
+|Rendezvous | 8 | Patch sequence | 24.1 | [Google] [Baidu] |
+|Rendezvous | 8 | Temporal sequence | --.-- | [Google] [Baidu] |
+|Rendezvous | 8 | Single Self Attention Head | 18.8 | [Google] [Baidu] |
+|Rendezvous | 8 | Multiple Self Attention Head | 26.1 | [Google] [Baidu] |
 |Rendezvous | 8 | CholecTriplet2021 Challenge Model | 32.7|   [Google] [Baidu] |
+------------
+
+Model weights are released periodically because some training are in progress.
+
+<br><br>
 
 
-<br>
-
-------
-# Training
-## Training on CholecT50 Dataset
-Experimental setup is in the published paper.
-
-## Training on Custom Dataset
-Adding custom datasets is quite simple, all you need to do is to organize your annotation files in the same format as in our training sets. Model layers can be modified to class size of your task.
-
-<br>
-
-------
-# Testing
-
-
-## Inference
-
-<br>
-
-## Evaluation
-### metrics: ivtmetrics
-```
-pip install ivtmetrics
-```
-or
-```
-conda install -c nwoye ivtmetrics
-```
-<br>
-
-
-------
+------------
 # License
 
 
 This code, models, and datasets are available for **non-commercial scientific research purposes** provided by [CC BY-NC-SA 4.0 LICENSE](https://creativecommons.org/licenses/by-nc-sa/4.0/) attached as [LICENSE file](LICENSE). 
 By downloading and using this code you agree to the terms in the [LICENSE](LICENSE). Third-party codes are subject to their respective licenses.
 
-<!-- 
+
+<br>
+
 ------
 # Acknowledgment
 
@@ -254,7 +300,7 @@ We thank the research teams of IHU and IRCAD  for their help in the initial anno
 <img src="files/condor.png" width="10%"  align="right">
 <br>
 <br><br>
--->
+
 
 
 ------
@@ -351,5 +397,4 @@ If you find this repo useful in your project or research, please consider citing
 ```
 
 #
-<br>
-This repo is maintained by CAMMA. Comments and update on models are welcomed. Check this page for updates.
+This repo is maintained by [CAMMA](http://camma.u-strasbg.fr). Comments and suggestions on models are welcomed. Check this page for updates.
