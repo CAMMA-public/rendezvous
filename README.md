@@ -6,13 +6,7 @@
 <br/>
 
 
-
-
-
-
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
-[![](https://img.shields.io/badge/WORK```IN-PROGRESS-blue?style=for-the-badge)](https://hamzamohdzubair.github.io/redant/)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) [![](https://img.shields.io/badge/WORK```IN-PROGRESS-blue?style=for-the-badge)](https://hamzamohdzubair.github.io/redant/)
 
 
 # **Rendezvous**: Attention Mechanisms for the Recognition of Surgical Action Triplets in Endoscopic Videos
@@ -26,36 +20,39 @@ This repository contains the implementation code, inference demo, and evaluation
 [![Read on ArXiv](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) 
 [![Journal Publication](https://img.shields.io/badge/Elsevier-Medical%20Image%20Analysis-orange)](https://doi.org/10.1016/j.media.2022.102433)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rendezvous-attention-mechanisms-for-the/action-triplet-recognition-on-cholect50)](https://paperswithcode.com/sota/action-triplet-recognition-on-cholect50?p=rendezvous-attention-mechanisms-for-the)
-<!-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/CAMMA-public/ConvLSTM-Surgical-Tool-Tracker/blob/master/evaluation.ipynb) -->
 
 
 
 
 # Abstract
-Out of all existing frameworks for surgical workflow analysis in endoscopic videos, action triplet recognition stands out as the only one aiming to provide truly fine-grained and comprehensive information on surgical activities. 
-This information, presented as <instrument, verb, target> combinations, is highly challenging to be accurately identified. 
-Triplet components can be difficult to recognize individually; in this task, it requires not only performing recognition simultaneously for all three triplet components, but also correctly establishing the data association between them.
-To achieve this task, we introduce our new model, the <i> Rendezvous</i> (RDV), which recognizes triplets directly from surgical videos by leveraging attention at two different levels.
-We first introduce a new form of spatial attention to capture individual action triplet components in a scene; called <i> Class Activation Guided Attention Mechanism</i> (CAGAM). 
-This technique focuses on the recognition of verbs and targets using activations resulting from instruments.
-To solve the association problem, our RDV model adds a new form of semantic attention inspired by Transformer networks; <i> Multi-Head of Mixed Attention</i> (MHMA). 
+Out of all existing frameworks for surgical workflow analysis in endoscopic videos, action triplet recognition stands out as the only one aiming to provide truly fine-grained and comprehensive information on surgical activities. This information, presented as <instrument, verb, target> combinations, is highly challenging to be accurately identified. Triplet components can be difficult to recognize individually; in this task, it requires not only performing recognition simultaneously for all three triplet components, but also correctly establishing the data association between them.
+
+To achieve this task, we introduce our new model, the <i> Rendezvous</i> (RDV), which recognizes triplets directly from surgical videos by leveraging attention at two different levels. We first introduce a new form of spatial attention to capture individual action triplet components in a scene; called <i> Class Activation Guided Attention Mechanism</i> (CAGAM). 
+This technique focuses on the recognition of verbs and targets using activations resulting from instruments. To solve the association problem, our RDV model adds a new form of semantic attention inspired by Transformer networks; <i> Multi-Head of Mixed Attention</i> (MHMA). 
 This technique uses several cross and self attentions to effectively capture relationships between instruments, verbs, and targets.
+
 We also introduce <i> CholecT50</i>  - a dataset of 50 endoscopic videos in which <i>every</i> frame has been annotated with labels from 100 triplet classes.
 Our proposed RDV model significantly improves the triplet prediction mAP by over 9% compared to the state-of-the-art methods on this dataset.
 
 <br>
 
+
 ------
+
 # News and Updates
+
 - <b>[2022.04.01]:</b> Demo code and pre-trained model released!
 - <b>[2022.04.12]:</b> 45 videos subset of CholecT50 released! [download access](http://camma.u-strasbg.fr/datasets).
 <!-- - <b>[2022.03.22]:</b> Paper accepted at Elsevier Medical Image Analysis 2022! -->
 - <b>[2022.05.03]:</b> PyTorch implementation code released!
+
 <br>
 
 
 ------
+
 # Model Overview
+
 <img src="files/rdv.png" width="38%" align="right" >
 
 The RDV model is composed of:
@@ -76,7 +73,9 @@ We hope this repo will help researches/engineers in the development of surgical 
 <br>
 
 ------
+
 # Performance
+
 ## Results Table
 
 
@@ -98,8 +97,11 @@ Available on Youtube.
 <br>
 
 ------
+
 # Installation
+
 ## Requirements
+
 The model depends on the following libraries:
 1. sklearn
 2. PIL
@@ -132,7 +134,9 @@ Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed 
 
 <br>
 
+
 ## Docker Example
+
 coming soon . . .
 
 <br>
@@ -147,7 +151,9 @@ coming soon . . .
 
 <br>
 
+
 ## Data Preparation
+
 * All frames are resized to 256 x 448 during training and evaluation.
 * Image data are mean normalized.
 * The dataset variants are tagged in this code as follows: 
@@ -159,27 +165,37 @@ coming soon . . .
 <br>
 
 ------
+
 ## Evaluation Metrics
+
 The *ivtmetrics* computes AP for triplet recognition. It also support the evaluation of the recognition of the triplet components.
+
 ```
 pip install ivtmetrics
 ```
+
 or
+
 ```
 conda install -c nwoye ivtmetrics
 ```
+
 Usage guide is found on [pypi.org](https://pypi.org/project/ivtmetrics/).
 
 <br>
 
 ------
+
 # Running the Model
+
 The code can be run in a trianing mode (`-t`) or testing mode (`-e`)  or both (`-t -e`) if you want to evaluate at the end of training :
 
 <br>
 
 ## Training on CholecT45/CholecT50 Dataset
+
 Simple training on CholecT50 dataset:
+
 ```
 python run.py -t  --data_dir="/path/to/dataset" --dataset_variant=cholect50 --version=1
 ```
@@ -204,6 +220,7 @@ python3 run.py -e --dataset_variant=cholect45-crossval --kfold 3 --batch 32 --ve
 <br>
 
 ## Training on Custom Dataset
+
 Adding custom datasets is quite simple, what you need to do are:
 - organize your annotation files in the same format as in [CholecT45](https://github.com/CAMMA-public/cholect45) dataset. 
 - final model layers can be modified to suit your task by changing the class-size (num_tool_classes, num_verb_classes, num_target_classes, num_triplet_classes) in the argparse.
@@ -211,12 +228,14 @@ Adding custom datasets is quite simple, what you need to do are:
 <br>
 
 ------
+
 # Model Zoo
 
 * **N.B.** Download links to models' weights will not be provided until after the CholecTriplet2022 challenge.
 
 
 ## PyTorch
+
 | Network   | Base      | Resolution | Dataset   | Data split  |  Link             |
 ------------|-----------|------------|-----------|-------------|-------------------|
 | Rendezvous| ResNet-18 | Low        | CholecT50 | RDV         |   [Google] [Baidu] |
@@ -249,6 +268,7 @@ Adding custom datasets is quite simple, what you need to do are:
 <br>
 
 ## TensorFlow v2
+
 | Network   | Base      | Resolution | Dataset   | Data split    | Link             |
 ------------|-----------|------------|-----------|---------------|------------------|
 | Rendezvous| ResNet-18 | High       | CholecT50 | RDV           |   [Google] [Baidu] |
@@ -288,6 +308,7 @@ By downloading and using this code you agree to the terms in the [LICENSE](LICEN
 <br>
 
 ------
+
 # Acknowledgment
 
 This work was supported by French state funds managed within the Investissements d'Avenir program by BPI France in the scope of ANR project CONDOR, ANR Labex CAMI, ANR DeepSurg, ANR IHU Strasbourg and ANR National AI Chair AI4ORSafety.
