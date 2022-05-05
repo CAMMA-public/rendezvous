@@ -436,8 +436,7 @@ if is_train:
                 start = time.time()  
                 mAP.reset_global()
                 print("Evaluating @ epoch: ", epoch, file=open(logfile, 'a+'))
-                for test_dataloader in test_dataloaders:
-                    test_loop(val_dataloader, model, activation, final_eval=False)
+                test_loop(val_dataloader, model, activation, final_eval=False)
                 behaviour = weight_mgt(mAP.compute_video_AP()['mAP'], epoch=epoch)
                 print("\t\t\t\t\t\t\t video-wise | eta {:.2f} secs | mAP => ivt: [{:.5f}] ".format( (time.time() - start), mAP.compute_video_AP('ivt', ignore_null=set_chlg_eval)['mAP']), file=open(logfile, 'a+'))      
         except KeyboardInterrupt:
