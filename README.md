@@ -40,7 +40,7 @@ Our proposed RDV model significantly improves the triplet prediction mAP by over
 - <b>[2022.05.09]:</b> TensorFlow v2 implementation code released!
 - <b>[2022.05.09]:</b> TensorFlow v1 implementation code released!
 - <b>[2022.05.03]:</b> PyTorch implementation code released!
-- <b>[2022.04.12]:</b> CholecT45: 45 videos subset of CholecT50 can now be accessed on [CAMMA website]](http://camma.u-strasbg.fr/datasets).
+- <b>[2022.04.12]:</b> CholecT45: 45 videos subset of CholecT50 can now be accessed on [CAMMA website](http://camma.u-strasbg.fr/datasets).
 - <b>[2022.03.22]:</b> Paper accepted at Elsevier journal, Medical Image Analysis 2022!
 - <b>[2022.04.01]:</b> Demo code and pre-trained model released!
 
