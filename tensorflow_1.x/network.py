@@ -7,6 +7,19 @@ import sys
 SCOPE = 'rendezvous'
 
 
+class Rendezvous(object):
+    def __init__(self, model='rendezvous', basename="resnet18", num_tool=6, num_verb=10, num_target=15, num_triplet=100, layer_size=8, num_heads=4, d_model=128, use_ln=False, hr_output=False):
+        super(Rendezvous, self).__init__()
+        self.encoder = Encoder(basename, num_tool, num_verb, num_target, num_triplet, hr_output=hr_output)
+        self.decoder = Decoder(layer_size, d_model, num_heads, num_triplet, use_ln=use_ln)
+
+    def __call__(self, inputs, is_training):
+        with tf.variable_scope(SCOPE):
+            enc_i, enc_v, enc_t, enc_ivt = self.encoder(inputs=inputs, is_training=is_training)
+            dec_ivt = self.decoder(enc_i, enc_v, enc_t, enc_ivt, is_training=is_training)
+        return enc_i, enc_v, enc_t, dec_ivt
+
+
 class Modules():
     def __init__(self):
         super(Modules, self).__init__()
@@ -143,19 +156,6 @@ class Modules():
             outputs   = tf.reshape(outputs, shape=out_dims)                
             print('\tBuilding unit: {}: {} --> {}'.format( scope.name, inputs.get_shape(),  outputs.get_shape()))
         return outputs
-
-
-class Rendezvous(object):
-    def __init__(self, model='rendezvous', basename="resnet18", num_tool=6, num_verb=10, num_target=15, num_triplet=100, layer_size=8, num_heads=4, d_model=128, use_ln=False, hr_output=False):
-        super(Rendezvous, self).__init__()
-        self.encoder = Encoder(basename, num_tool, num_verb, num_target, num_triplet, hr_output=hr_output)
-        self.decoder = Decoder(layer_size, d_model, num_heads, num_triplet, use_ln=use_ln)
-
-    def __call__(self, inputs, is_training):
-        with tf.variable_scope(SCOPE):
-            enc_i, enc_v, enc_t, enc_ivt = self.encoder(inputs=inputs, is_training=is_training)
-            dec_ivt = self.decoder(enc_i, enc_v, enc_t, enc_ivt, is_training=is_training)
-        return enc_i, enc_v, enc_t, dec_ivt
 
 
 class Encoder(Modules):
