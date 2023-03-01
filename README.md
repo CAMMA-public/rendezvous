@@ -232,21 +232,21 @@ Adding custom datasets is quite simple, what you need to do are:
 
 ## PyTorch
 
-| Network   | Base      | Resolution | Dataset   | Data split  |  Link             |
+| Network   | Base      | Resolution | Dataset   | Data split  |  Model Weights    |
 ------------|-----------|------------|-----------|-------------|-------------------|
-| Rendezvous| ResNet-18 | Low        | CholecT50 | RDV         |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | High       | CholecT50 | RDV         |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | Challenge   |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k1 |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k2 |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k3 |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k4 |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k5 |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k1 |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k2 |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k3 |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k4 |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k5 |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | RDV         |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect50_batchnorm_lowres.pth) |
+| Rendezvous| ResNet-18 | High       | CholecT50 | RDV         |   [Download] |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | Challenge   |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect50_challenge_k0_batchnorm_lowres.pth) |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k1 |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect50_crossval_k1_layernorm_lowres.pth) |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k2 |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect50_crossval_k2_layernorm_lowres.pth) |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k3 |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect50_crossval_k3_layernorm_lowres.pth) |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k4 |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect50_crossval_k4_layernorm_lowres.pth) |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k5 |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect50_crossval_k5_layernorm_lowres.pth) |
+| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k1 |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect45_crossval_k1_layernorm_lowres.pth) |
+| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k2 |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect45_crossval_k2_layernorm_lowres.pth) |
+| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k3 |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect45_crossval_k3_layernorm_lowres.pth) |
+| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k4 |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect45_crossval_k4_layernorm_lowres.pth) |
+| Rendezvous| ResNet-18 | Low        | CholecT45 | crossval k5 |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect45_crossval_k5_layernorm_lowres.pth) |
 
 
 <br />
@@ -255,8 +255,9 @@ Adding custom datasets is quite simple, what you need to do are:
 
 | Network   | Base      | Resolution | Dataset   | Data split    | Link             |
 ------------|-----------|------------|-----------|---------------|------------------|
-| Rendezvous| ResNet-18 | High       | CholecT50 | RDV           |  [Google] [Baidu] |
-| Rendezvous| ResNet-18 | High       | CholecT50 | Challenge     |  [Google] [Baidu] |
+| Rendezvous| ResNet-18 | High       | CholecT50 | RDV           |  [Download] |
+| Rendezvous| ResNet-18 | High       | CholecT50 | Challenge     |  [Download] |
+| Rendezvous| ResNet-18 | High       | CholecT50 | Challenge     |  [Download] |
 
 <br />
 
@@ -265,9 +266,8 @@ Adding custom datasets is quite simple, what you need to do are:
 
 | Network   | Base      | Resolution | Dataset   | Data split    | Link             |
 ------------|-----------|------------|-----------|---------------|------------------|
-| Rendezvous| ResNet-18 | High       | CholecT50 | RDV           |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | Low        | CholecT50 | RDV           |   [Google] [Baidu] |
-| Rendezvous| ResNet-18 | High       | CholecT50 | Challenge     |   [Google] [Baidu] |
+| Rendezvous| ResNet-18 | High       | CholecT50 | RDV           |   [Download] |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | RDV           |   [Download] |
 
 
 <br />
@@ -277,15 +277,15 @@ Adding custom datasets is quite simple, what you need to do are:
 TensorFlow v1
 | Model | Layer Size | Ablation Component |AP<sub>IVT</sub> | Link |
 ------------|------|------------|------|-----|
-|Rendezvous | 1 | Proposed | 24.6 | [Google] [Baidu] |
-|Rendezvous | 2 | Proposed | 27.0 | [Google] [Baidu] |
-|Rendezvous | 4 | Proposed | 27.3 | [Google] [Baidu] |
-|Rendezvous | 8 | Proposed | 29.9 | [Google] [Baidu] |
-|Rendezvous | 8 | Patch sequence | 24.1 | [Google] [Baidu] |
-|Rendezvous | 8 | Temporal sequence | --.-- | [Google] [Baidu] |
-|Rendezvous | 8 | Single Self Attention Head | 18.8 | [Google] [Baidu] |
-|Rendezvous | 8 | Multiple Self Attention Head | 26.1 | [Google] [Baidu] |
-|Rendezvous | 8 | CholecTriplet2021 Challenge Model | 32.7|   [Google] [Baidu] |
+|Rendezvous | 1 | Proposed | 24.6 | [Download] |
+|Rendezvous | 2 | Proposed | 27.0 | [Download] |
+|Rendezvous | 4 | Proposed | 27.3 | [Download] |
+|Rendezvous | 8 | Proposed | 29.9 | [Download] |
+|Rendezvous | 8 | Patch sequence | 24.1 | [Download] |
+|Rendezvous | 8 | Temporal sequence | --.-- | [Download] |
+|Rendezvous | 8 | Single Self Attention Head | 18.8 | [Download] |
+|Rendezvous | 8 | Multiple Self Attention Head | 26.1 | [Download] |
+|Rendezvous | 8 | CholecTriplet2021 Challenge Model | 32.7| [Download] |
 ------------
 
 Model weights are released periodically because some training are in progress.
