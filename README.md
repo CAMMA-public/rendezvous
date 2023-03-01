@@ -37,6 +37,7 @@ Our proposed RDV model significantly improves the triplet prediction mAP by over
 
 # News and Updates
 
+- <b>[2023.02.20]:</b> CholecT50 can now be accessed on [CAMMA website](http://camma.u-strasbg.fr/datasets).
 - <b>[2022.05.09]:</b> TensorFlow v2 implementation code released!
 - <b>[2022.05.09]:</b> TensorFlow v1 implementation code released!
 - <b>[2022.05.03]:</b> PyTorch implementation code released!
@@ -143,7 +144,7 @@ coming soon . . .
 # Dataset Zoo
 
 * [CholecT45](https://github.com/CAMMA-public/cholect45) 
-* CholecT50
+* [CholecT50](https://github.com/CAMMA-public/cholect50) 
 * [Dataset splits](https://arxiv.org/abs/2204.05235)
 
 <br />
