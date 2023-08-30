@@ -235,7 +235,7 @@ Adding custom datasets is quite simple, what you need to do are:
 
 | Network   | Base      | Resolution | Dataset   | Data split  |  Model Weights    |
 ------------|-----------|------------|-----------|-------------|-------------------|
-| Rendezvous| ResNet-18 | Low        | CholecT50 | RDV         |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect50_batchnorm_lowres.pth) |
+| Rendezvous| ResNet-18 | Low        | CholecT50 | RDV         |   [Download]()<!--(https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect50_batchnorm_lowres.pth)--> |
 | Rendezvous| ResNet-18 | High       | CholecT50 | RDV         |   [Download] |
 | Rendezvous| ResNet-18 | Low        | CholecT50 | Challenge   |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect50_challenge_k0_batchnorm_lowres.pth) |
 | Rendezvous| ResNet-18 | Low        | CholecT50 | crossval k1 |   [Download](https://s3.unistra.fr/camma_public/github/rendezvous/rendezvous_l8_cholect50_crossval_k1_layernorm_lowres.pth) |
